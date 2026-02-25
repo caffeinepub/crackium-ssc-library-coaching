@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Clear all website content and render a blank empty page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Remove all page sections (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) from the frontend and replace the entire app with a single blank, empty page that renders nothing visible to the user.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Website hi hatana h",
+          "Haan"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The deployed site shows a completely blank page with no text, images, or UI elements.",
+        "All section components (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) are removed from App.tsx.",
+        "No navigation, branding, or content is visible on the page."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/hooks/ or frontend/src/main.tsx.",
+    "Do not delete or break the backend actor in backend/main.mo."
+  ],
+  "nonGoals": [
+    "Deleting the project or its deployment infrastructure.",
+    "Modifying backend logic.",
+    "Adding any new content or features."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

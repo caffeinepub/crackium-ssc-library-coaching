@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report confirming that all frontend page sections were removed and replaced with a single blank empty page in App.tsx.",
+  "frontend-file-summaries.txt": "JSON document summarizing each frontend source file, describing the design system, components, and their visual/functional roles.",
+  "frontend/index.css": "Tailwind CSS entry file defining OKLCH-based CSS custom properties for light and dark themes including colors, borders, charts, and sidebar variables.",
+  "frontend/index.html": "HTML entry point for the React app titled 'Crackium SSC Library & Coaching' that mounts the app into a root div.",
+  "frontend/src/App.tsx": "Blank React application component that renders nothing, producing an empty page.",
+  "frontend/src/components/ContactSection.tsx": "Contact section displaying location, phone numbers, and hours in a grid layout with a gold/emerald design, plus a full-width CTA banner.",
+  "frontend/src/components/CoursesSection.tsx": "Courses section displaying a grid of 10 SSC exam offerings with icons, highlight states, and gold/emerald styling on a charcoal background.",
+  "frontend/src/components/Footer.tsx": "Footer component with brand logo, quick navigation links with smooth scroll, contact info, and a charcoal/gold/emerald design theme.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header with logo, CRACKIUMSSC branding, desktop nav links, phone CTA, gold enroll button, and a responsive mobile menu toggle.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section for Crackium SSC coaching institute featuring a background image with overlays, headline, tagline, Hindi subtitle, and CTA buttons to call or scroll to courses.",
+  "frontend/src/components/LibrarySection.tsx": "Section showcasing the institute's premium study library with a grid of six facility cards (AC hall, seating, lighting, CCTV, silence, hours) and a call-to-action to book a seat.",
+  "frontend/src/components/MockTestSection.tsx": "Section promoting mock tests and solutions, displaying covered SSC courses in a checklist and phone numbers to enroll, with a bold typographic layout split into two columns.",
+  "frontend/src/components/WhyChooseSection.tsx": "Section listing six USPs of Crackium SSC (faculty, tests, material, batch size, online support, environment) displayed in a numbered icon-card grid with hover effects.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, returning an anonymous or authenticated actor based on the current Internet Identity, and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an Internet Identity authentication context and hook, managing AuthClient creation, login/logout flow, delegation validity, and exposing identity state and status flags to child components.",
+  "frontend/src/index.css": "Global CSS file that imports Google Fonts (Playfair Display, DM Sans), sets up Tailwind directives, and defines a dark-themed design system using OKLCH CSS custom properties for colors (emerald, gold, charcoal), typography, and utility classes.",
+  "frontend/src/main.tsx": "React app entry point that mounts the app with QueryClientProvider (React Query) and InternetIdentityProvider wrappers around the root App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with custom OKLCH-based color palettes (emerald-brand, gold-brand, charcoal), heading/body font families, container settings, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state metadata file tracking version, features, and build context; records a single completed feature that replaced all frontend page sections with a blank empty page."
+}

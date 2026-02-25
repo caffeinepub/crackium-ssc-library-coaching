@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-remove-all-page-sections-header-hero-courses-mocktest-whychoose-library-contact-footer-from-the-frontend-and-replace-the-entire-app-with-a-single-blank-empty-page-that-renders-nothing-visible-to-the-user",
+      "title": "Remove all page sections (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) from the frontend and replace the entire app with a single blank, empty page that renders nothing visible to the user.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Clear all website content and render a blank empty page",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

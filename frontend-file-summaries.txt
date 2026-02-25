@@ -1,0 +1,13 @@
+{
+  "frontend/src/index.css": "Global CSS with a new deep charcoal + emerald green + gold OKLCH design system, Google Fonts import for Playfair Display (heading) and DM Sans (body), and utility classes for gold/emerald gradients, text gradients, and charcoal backgrounds.",
+  "frontend/tailwind.config.js": "Updated Tailwind config replacing royal-blue/orange with charcoal-brand, emerald-brand, and gold-brand color palettes using OKLCH values, Playfair Display heading font, DM Sans body font, and new gold/emerald box shadows and animation keyframes.",
+  "frontend/src/App.tsx": "Blank application component that renders nothing, effectively producing an empty page.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header with new logo image, CRACKIUM+SSC branding in white/gold, charcoal background, emerald phone CTA, gold \"Enroll Now\" button, and responsive mobile menu.",
+  "frontend/src/components/HeroSection.tsx": "Full-viewport hero with new hero background image, charcoal/emerald overlay, editorial two-column layout with large serif headline, gold CTA buttons, and a stats panel card with floating location badge.",
+  "frontend/src/components/CoursesSection.tsx": "Courses grid with 10 SSC offerings on charcoal background, grid-line texture, emerald highlighted cards, gold accent hover states, and a bottom CTA.",
+  "frontend/src/components/WhyChooseSection.tsx": "Six USP cards in a grid-gap mosaic layout on charcoal-light background, emerald icon squares, large watermark numbers, gold hover accents, and a two-column editorial header.",
+  "frontend/src/components/LibrarySection.tsx": "Two-column library section with editorial serif headline, gold blockquote accent, and a 2-column facilities grid with emerald icon squares on charcoal background.",
+  "frontend/src/components/ContactSection.tsx": "Contact section with three info panels (location, phone, hours) in a grid-gap mosaic, plus a full-width CTA banner with gold trophy icon, emerald live indicator, and dual call buttons.",
+  "frontend/src/components/Footer.tsx": "Footer with new logo image, CRACKIUM/SSC branding, animated quick-link hover effects, emerald contact icons, gold accent colors on charcoal background, and caffeine.ai attribution.",
+  "frontend/src/components/MockTestSection.tsx": "Split two-column section with giant gold typographic \"MOCK TEST + SOLUTION\" headline on the left and course checklist with emerald phone CTAs and gold enroll button on the right."
+}

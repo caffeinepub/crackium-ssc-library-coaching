@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-all-page-sections-header-hero-courses-mocktest-whychoose-library-contact-footer-from-the-frontend-and-replace-the-entire-app-with-a-single-blank-empty-page-that-renders-nothing-visible-to-the-user",
+      "featureTitle": "Remove all page sections (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) from the frontend and replace the entire app with a single blank, empty page that renders nothing visible to the user.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
