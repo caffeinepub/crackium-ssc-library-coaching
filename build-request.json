@@ -1,36 +1,69 @@
 {
   "kind": "build_request",
-  "title": "Clear all website content and render a blank empty page",
+  "title": "Build a completely new website (different design and concept)",
+  "projectName": "Fresh Start",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove all page sections (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) from the frontend and replace the entire app with a single blank, empty page that renders nothing visible to the user.",
+      "text": "Replace the existing CRACKIUM SSC coaching website with a completely new website. The new site must have a distinct concept, design language, color palette, and layout — nothing should visually resemble or reuse the current orange/glassmorphism dark-themed SSC academy site.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-1"
         ],
         "quotes": [
-          "Website hi hatana h",
-          "Haan"
+          "Different website bnao"
         ]
       },
       "acceptanceCriteria": [
-        "The deployed site shows a completely blank page with no text, images, or UI elements.",
-        "All section components (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) are removed from App.tsx.",
-        "No navigation, branding, or content is visible on the page."
+        "The new site has a completely different visual identity (colors, typography, layout) from the previous CRACKIUM site",
+        "No orange glow borders, glassmorphism cards, or SSC coaching content from the previous design are present",
+        "The site has a coherent, polished look and feel with a clear new theme"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Apply a bold, creative visual theme to the new website — choose a distinct style (e.g., clean minimal, editorial, vibrant gradient, brutalist, nature-inspired, etc.) with a unique color palette, typography pairing, and layout that is consistently applied across all sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Different website bnao"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A clearly defined color palette (not blue/purple, not orange) is used consistently across all components",
+        "Typography choices are intentional and distinct from the previous site",
+        "All sections follow the same design language"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "The backend Motoko actor should remain as a minimal empty actor. No backend functionality is required for this new website.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "backend/main.mo compiles successfully as an empty or minimal actor",
+        "No new backend endpoints or data models are added"
       ]
     }
   ],
   "constraints": [
-    "Do not modify files under frontend/src/hooks/ or frontend/src/main.tsx.",
-    "Do not delete or break the backend actor in backend/main.mo."
+    "Do not reuse any visual design elements (colors, card styles, section layouts, content) from the previous CRACKIUM SSC coaching site",
+    "Do not use blue or purple as the primary color palette",
+    "Do not modify immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui"
   ],
   "nonGoals": [
-    "Deleting the project or its deployment infrastructure.",
-    "Modifying backend logic.",
-    "Adding any new content or features."
+    "Keeping any part of the CRACKIUM SSC coaching site design or content",
+    "Adding authentication or Internet Identity login flows",
+    "Adding backend data persistence or canister logic"
   ],
   "imageRequirements": {
     "required": [],

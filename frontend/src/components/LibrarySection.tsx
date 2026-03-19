@@ -1,114 +1,97 @@
-import { Wind, Armchair, Sun, Camera, VolumeX, Clock } from 'lucide-react';
+import { CheckCircle2 } from "lucide-react";
 
-const facilities = [
+const steps = [
   {
-    icon: Wind,
-    title: 'Fully AC Reading Hall',
-    desc: 'Stay comfortable year-round in our fully air-conditioned reading hall.',
+    number: "01",
+    title: "Discovery",
+    duration: "Week 1–2",
+    description:
+      "We start by listening. Deep-dive workshops, stakeholder interviews, and competitive analysis to understand your world.",
+    deliverables: ["Brand Audit", "Audience Research", "Creative Brief"],
   },
   {
-    icon: Armchair,
-    title: 'Comfortable Seating',
-    desc: 'Ergonomic chairs and spacious desks designed for long study sessions.',
+    number: "02",
+    title: "Strategy",
+    duration: "Week 2–3",
+    description:
+      "We define the creative direction — positioning, visual language, and a roadmap that aligns design with business outcomes.",
+    deliverables: ["Positioning Map", "Moodboards", "Creative Direction"],
   },
   {
-    icon: Sun,
-    title: 'Proper Lighting',
-    desc: 'Optimal lighting conditions to reduce eye strain during extended study hours.',
+    number: "03",
+    title: "Design",
+    duration: "Week 3–6",
+    description:
+      "Iterative design sprints with regular check-ins. We present concepts, gather feedback, and refine until it's right.",
+    deliverables: ["Design Concepts", "Prototypes", "Revision Rounds"],
   },
   {
-    icon: Camera,
-    title: 'CCTV Security',
-    desc: '24/7 CCTV surveillance ensuring a safe and secure study environment.',
-  },
-  {
-    icon: VolumeX,
-    title: 'Clean & Silent Environment',
-    desc: 'Strictly maintained silence and cleanliness for maximum concentration.',
-  },
-  {
-    icon: Clock,
-    title: 'Long Study Hours',
-    desc: 'Extended operating hours to accommodate your study schedule and goals.',
+    number: "04",
+    title: "Delivery",
+    duration: "Week 6–8",
+    description:
+      "Final assets, handoff documentation, and launch support. We don't disappear after delivery — we're here for the long run.",
+    deliverables: ["Final Files", "Brand Guidelines", "Launch Support"],
   },
 ];
 
-export default function LibrarySection() {
+export default function ProcessSection() {
   return (
-    <section id="library" className="py-24 bg-charcoal-brand relative overflow-hidden">
-      {/* Top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-brand/30 to-transparent" />
-
-      {/* Right side emerald glow */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-emerald-brand/5 blur-3xl" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 gap-16 items-start">
-          {/* Left: Text Content (2 cols) */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-12 bg-emerald-brand" />
-              <span className="font-body text-emerald-brand-light text-xs font-semibold tracking-[0.2em] uppercase">
-                Premium Study Library
-              </span>
-            </div>
-
-            <h2 className="font-heading font-black text-4xl sm:text-5xl text-white mb-6 leading-tight">
-              Premium SSC
-              <br />
-              <span className="text-gradient-emerald">Study Library</span>
-              <br />
-              <span className="text-2xl sm:text-3xl text-white/50 font-normal italic">in Jharoda Majra</span>
+    <section id="process" className="bg-cream-dark py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Header */}
+        <div className="mb-16 pb-8 border-b border-border">
+          <span className="font-mono text-xs tracking-widest uppercase text-[var(--forest)] mb-3 block">
+            How We Work
+          </span>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+            <h2 className="font-display text-display-lg font-light text-[var(--charcoal)]">
+              Our Process
             </h2>
-
-            <p className="font-body text-white/55 text-base leading-relaxed mb-6">
-              Serious aspirants ke liye — a{' '}
-              <span className="text-emerald-brand-light font-semibold">distraction-free atmosphere</span>{' '}
-              where you can focus entirely on your preparation. Our premium library is designed to give you
-              the perfect environment to study, revise, and succeed.
+            <p className="font-sans text-base text-muted-foreground max-w-sm leading-relaxed">
+              A transparent, collaborative process designed to produce exceptional results — every time.
             </p>
+          </div>
+        </div>
 
-            <blockquote className="border-l-2 border-gold-brand pl-5 mb-8">
-              <p className="font-body text-white/60 text-sm leading-relaxed italic">
-                "A peaceful, disciplined study space is the foundation of every SSC topper's success.
-                We've built exactly that for you at Crackium SSC."
-              </p>
-            </blockquote>
-
-            <a
-              href="tel:6206899318"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-sm gold-gradient text-charcoal-brand font-body font-bold text-sm shadow-gold hover:shadow-gold-lg transition-all duration-300 hover:scale-105"
+        {/* Steps */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border stagger-children">
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="bg-cream-dark p-8 group hover:bg-cream transition-colors duration-300"
             >
-              Book Your Library Seat
-            </a>
-          </div>
+              {/* Number + duration */}
+              <div className="flex items-center justify-between mb-8">
+                <span className="font-mono text-xs tracking-widest uppercase text-[var(--forest)] opacity-70">
+                  {step.number}
+                </span>
+                <span className="font-mono text-xs tracking-wide text-muted-foreground bg-cream px-2 py-1 group-hover:bg-cream-dark transition-colors duration-300">
+                  {step.duration}
+                </span>
+              </div>
 
-          {/* Right: Facilities Grid (3 cols) */}
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-px bg-charcoal-brand-mid">
-            {facilities.map((facility) => {
-              const Icon = facility.icon;
-              return (
-                <div
-                  key={facility.title}
-                  className="group bg-charcoal-brand-light p-6 hover:bg-charcoal-brand-mid transition-all duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 emerald-gradient flex items-center justify-center flex-shrink-0 shadow-emerald group-hover:shadow-emerald-lg transition-shadow">
-                      <Icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-white text-base mb-1 group-hover:text-gold-brand transition-colors">
-                        {facility.title}
-                      </h3>
-                      <p className="font-body text-white/45 text-sm leading-relaxed">
-                        {facility.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+              {/* Title */}
+              <h3 className="font-display text-2xl font-light text-[var(--charcoal)] mb-3 group-hover:text-[var(--forest)] transition-colors duration-300">
+                {step.title}
+              </h3>
+
+              {/* Description */}
+              <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-6">
+                {step.description}
+              </p>
+
+              {/* Deliverables */}
+              <ul className="space-y-2">
+                {step.deliverables.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <CheckCircle2 size={12} className="text-[var(--forest)] flex-shrink-0" />
+                    <span className="font-mono text-xs text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

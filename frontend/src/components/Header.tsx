@@ -1,139 +1,104 @@
-import { useState } from 'react';
-import { Phone, Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+
+const navLinks = [
+  { label: "Work", href: "#work" },
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+  { label: "About", href: "#philosophy" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const navLinks = [
-    { label: 'Courses', href: '#courses' },
-    { label: 'Mock Test', href: '#mock-test' },
-    { label: 'Why Us', href: '#why-choose' },
-    { label: 'Library', href: '#library' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
-  const handleNavClick = (href: string) => {
-    setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-charcoal-brand/96 backdrop-blur-md border-b border-gold-brand/15">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-cream/95 backdrop-blur-md border-b border-border shadow-card-sm"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img
-              src="/assets/generated/logo-new.dim_400x120.png"
-              alt="Crackium SSC Logo"
-              className="h-10 md:h-12 w-auto object-contain"
-              onError={(e) => {
-                const target = e.currentTarget;
-                target.style.display = 'none';
-                const fallback = target.nextElementSibling as HTMLElement;
-                if (fallback) fallback.style.display = 'flex';
-              }}
-            />
-            <div className="hidden items-center gap-2" style={{ display: 'none' }}>
-              <div className="w-9 h-9 rounded-sm emerald-gradient flex items-center justify-center">
-                <span className="font-heading font-black text-white text-sm">C</span>
-              </div>
-              <div className="flex flex-col leading-none">
-                <div className="flex items-baseline">
-                  <span className="font-heading font-black text-white text-xl tracking-tight">CRACKIUM</span>
-                  <span className="font-heading font-black text-gold-brand text-xl tracking-tight">SSC</span>
-                </div>
-                <span className="text-white/40 text-[10px] font-body tracking-widest uppercase">Coaching & Library</span>
-              </div>
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-8 h-8 rounded-none bg-[var(--forest)] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:rotate-12">
+              <span className="text-[var(--cream)] font-display font-bold text-sm leading-none">V</span>
             </div>
-            {/* Always visible text brand alongside logo */}
-            <div className="flex flex-col leading-none">
-              <div className="flex items-baseline">
-                <span className="font-heading font-black text-white text-xl md:text-2xl tracking-tight">CRACKIUM</span>
-                <span className="font-heading font-black text-gold-brand text-xl md:text-2xl tracking-tight">SSC</span>
-              </div>
-              <span className="text-white/40 text-[10px] font-body tracking-widest uppercase">Coaching & Library</span>
-            </div>
-          </div>
+            <span className="font-display text-xl font-semibold tracking-tight text-[var(--charcoal)]">
+              Verdant<span className="text-[var(--forest)]">.</span>
+            </span>
+          </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-0.5">
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="px-4 py-2 text-white/65 hover:text-gold-brand font-body font-medium text-sm transition-colors duration-200 rounded-sm hover:bg-gold-brand/8 tracking-wide"
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-mono text-xs tracking-widest uppercase text-[var(--charcoal-mid)] hover:text-[var(--forest)] transition-colors duration-200 link-underline"
               >
                 {link.label}
-              </button>
+              </a>
             ))}
           </nav>
 
-          {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-3">
-            <a
-              href="tel:6206899318"
-              className="hidden sm:flex items-center gap-2 text-emerald-brand-light hover:text-emerald-brand font-body font-semibold text-sm transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>6206899318</span>
-            </a>
+          {/* CTA */}
+          <div className="hidden md:flex items-center gap-4">
             <a
               href="#contact"
-              onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-              className="hidden md:inline-flex items-center px-5 py-2 rounded-sm gold-gradient text-charcoal-brand font-body font-bold text-sm shadow-gold hover:shadow-gold-lg transition-all duration-200 hover:scale-105 tracking-wide"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--forest)] text-[var(--cream)] font-sans text-sm font-medium tracking-wide transition-all duration-300 hover:bg-[var(--forest-dark)] hover:shadow-forest-sm"
             >
-              Enroll Now
+              Start a Project
             </a>
-            <button
-              className="md:hidden p-2 text-white/70 hover:text-gold-brand transition-colors"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
           </div>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden p-2 text-[var(--charcoal)] hover:text-[var(--forest)] transition-colors"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-charcoal-brand-light border-t border-gold-brand/15 px-4 py-4 space-y-1">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-400 ${
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        } bg-cream border-b border-border`}
+      >
+        <nav className="px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href)}
-              className="block w-full text-left px-4 py-3 text-white/70 hover:text-gold-brand font-body font-medium text-sm transition-colors rounded-sm hover:bg-gold-brand/8"
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="font-mono text-xs tracking-widest uppercase text-[var(--charcoal-mid)] hover:text-[var(--forest)] transition-colors"
             >
               {link.label}
-            </button>
+            </a>
           ))}
-          <div className="pt-3 border-t border-gold-brand/15 flex flex-col gap-2">
-            <a
-              href="tel:6206899318"
-              className="flex items-center gap-2 px-4 py-2 text-emerald-brand-light font-body font-semibold text-sm"
-            >
-              <Phone className="w-4 h-4" />
-              6206899318
-            </a>
-            <a
-              href="tel:8252065374"
-              className="flex items-center gap-2 px-4 py-2 text-emerald-brand-light font-body font-semibold text-sm"
-            >
-              <Phone className="w-4 h-4" />
-              8252065374
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-              className="inline-flex justify-center items-center px-4 py-2 rounded-sm gold-gradient text-charcoal-brand font-body font-bold text-sm shadow-gold"
-            >
-              Enroll Now
-            </a>
-          </div>
-        </div>
-      )}
+          <a
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+            className="mt-2 inline-flex items-center justify-center px-5 py-3 bg-[var(--forest)] text-[var(--cream)] font-sans text-sm font-medium tracking-wide"
+          >
+            Start a Project
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }

@@ -1,22 +1,40 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "New project",
+  "summary": "User wants to build a different/new website from scratch.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-all-page-sections-header-hero-courses-mocktest-whychoose-library-contact-footer-from-the-frontend-and-replace-the-entire-app-with-a-single-blank-empty-page-that-renders-nothing-visible-to-the-user",
-      "title": "Remove all page sections (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) from the frontend and replace the entire app with a single blank, empty page that renders nothing visible to the user.",
+      "id": "feature-replace-the-existing-crackium-ssc-coaching-website-with-a-completely-new-website-the-new-site-must-have-a-distinct-concept-design-language-color-palette-and-layout-nothing-should-visually-resemble-or-reuse-the-current-orange-glassmorphism-dark-themed-ssc-academy-site",
+      "title": "Replace the existing CRACKIUM SSC coaching website with a completely new website. The new site must have a distinct concept, design language, color palette, and layout — nothing should visually resemble or reuse the current orange/glassmorphism dark-themed SSC academy site.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-apply-a-bold-creative-visual-theme-to-the-new-website-choose-a-distinct-style-e-g-clean-minimal-editorial-vibrant-gradient-brutalist-nature-inspired-etc-with-a-unique-color-palette-typography-pairing-and-layout-that-is-consistently-applied-across-all-sections",
+      "title": "Apply a bold, creative visual theme to the new website — choose a distinct style (e.g., clean minimal, editorial, vibrant gradient, brutalist, nature-inspired, etc.) with a unique color palette, typography pairing, and layout that is consistently applied across all sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
     }
   ],
-  "new_feature_requests": [],
-  "projectName": "Clear all website content and render a blank empty page",
+  "new_feature_requests": [
+    {
+      "id": "AR-3",
+      "summary": "The backend Motoko actor should remain as a minimal empty actor. No backend functionality is required for this new website.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Fresh Start",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

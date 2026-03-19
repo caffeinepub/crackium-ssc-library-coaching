@@ -2,10 +2,21 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-all-page-sections-header-hero-courses-mocktest-whychoose-library-contact-footer-from-the-frontend-and-replace-the-entire-app-with-a-single-blank-empty-page-that-renders-nothing-visible-to-the-user",
-      "featureTitle": "Remove all page sections (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) from the frontend and replace the entire app with a single blank, empty page that renders nothing visible to the user.",
+      "featureId": "feature-replace-the-existing-crackium-ssc-coaching-website-with-a-completely-new-website-the-new-site-must-have-a-distinct-concept-design-language-color-palette-and-layout-nothing-should-visually-resemble-or-reuse-the-current-orange-glassmorphism-dark-themed-ssc-academy-site",
+      "featureTitle": "Replace the existing CRACKIUM SSC coaching website with a completely new website. The new site must have a distinct concept, design language, color palette, and layout — nothing should visually resemble or reuse the current orange/glassmorphism dark-themed SSC academy site.",
       "files": [
-        "frontend/src/App.tsx"
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactSection.tsx",
+        "frontend/src/components/CoursesSection.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/LibrarySection.tsx",
+        "frontend/src/components/MockTestSection.tsx",
+        "frontend/src/components/WhyChooseSection.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,6 +28,26 @@
       ],
       "testIds": [
         "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-bold-creative-visual-theme-to-the-new-website-choose-a-distinct-style-e-g-clean-minimal-editorial-vibrant-gradient-brutalist-nature-inspired-etc-with-a-unique-color-palette-typography-pairing-and-layout-that-is-consistently-applied-across-all-sections",
+      "featureTitle": "Apply a bold, creative visual theme to the new website — choose a distinct style (e.g., clean minimal, editorial, vibrant gradient, brutalist, nature-inspired, etc.) with a unique color palette, typography pairing, and layout that is consistently applied across all sections.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
       ],
       "confidence": "high"
     }

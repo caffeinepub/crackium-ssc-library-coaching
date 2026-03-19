@@ -1,13 +1,14 @@
 {
-  "frontend/src/index.css": "Global CSS with a new deep charcoal + emerald green + gold OKLCH design system, Google Fonts import for Playfair Display (heading) and DM Sans (body), and utility classes for gold/emerald gradients, text gradients, and charcoal backgrounds.",
-  "frontend/tailwind.config.js": "Updated Tailwind config replacing royal-blue/orange with charcoal-brand, emerald-brand, and gold-brand color palettes using OKLCH values, Playfair Display heading font, DM Sans body font, and new gold/emerald box shadows and animation keyframes.",
-  "frontend/src/App.tsx": "Blank application component that renders nothing, effectively producing an empty page.",
-  "frontend/src/components/Header.tsx": "Sticky navigation header with new logo image, CRACKIUM+SSC branding in white/gold, charcoal background, emerald phone CTA, gold \"Enroll Now\" button, and responsive mobile menu.",
-  "frontend/src/components/HeroSection.tsx": "Full-viewport hero with new hero background image, charcoal/emerald overlay, editorial two-column layout with large serif headline, gold CTA buttons, and a stats panel card with floating location badge.",
-  "frontend/src/components/CoursesSection.tsx": "Courses grid with 10 SSC offerings on charcoal background, grid-line texture, emerald highlighted cards, gold accent hover states, and a bottom CTA.",
-  "frontend/src/components/WhyChooseSection.tsx": "Six USP cards in a grid-gap mosaic layout on charcoal-light background, emerald icon squares, large watermark numbers, gold hover accents, and a two-column editorial header.",
-  "frontend/src/components/LibrarySection.tsx": "Two-column library section with editorial serif headline, gold blockquote accent, and a 2-column facilities grid with emerald icon squares on charcoal background.",
-  "frontend/src/components/ContactSection.tsx": "Contact section with three info panels (location, phone, hours) in a grid-gap mosaic, plus a full-width CTA banner with gold trophy icon, emerald live indicator, and dual call buttons.",
-  "frontend/src/components/Footer.tsx": "Footer with new logo image, CRACKIUM/SSC branding, animated quick-link hover effects, emerald contact icons, gold accent colors on charcoal background, and caffeine.ai attribution.",
-  "frontend/src/components/MockTestSection.tsx": "Split two-column section with giant gold typographic \"MOCK TEST + SOLUTION\" headline on the left and course checklist with emerald phone CTAs and gold enroll button on the right."
+  "frontend/src/index.css": "Complete redesign with Cormorant Garamond (serif display), Outfit (sans), and DM Mono fonts; OKLCH forest green, warm cream, charcoal, and gold color palette; fade-up animations, marquee ticker, dot-grid, link-underline, and hover utilities.",
+  "frontend/tailwind.config.js": "New Tailwind config with forest/cream/charcoal/gold color tokens, Cormorant Garamond display font, Outfit sans font, DM Mono, editorial display font sizes, and card/forest/gold shadow tokens.",
+  "frontend/src/App.tsx": "Main app component composing the new Verdant Studio creative agency sections: Header, HeroSection, ServicesSection, PhilosophySection, WorkSection, ProcessSection, ContactSection, and Footer.",
+  "frontend/src/components/Header.tsx": "Sticky header with forest-green square logo mark, DM Mono uppercase nav links, scroll-aware frosted background, and a forest-green CTA button; includes responsive mobile menu.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen dark charcoal hero with dot-grid, pulsing decorative circles, editorial Cormorant Garamond headline with gold italic accent, gold CTA button, and a bordered stats panel.",
+  "frontend/src/components/CoursesSection.tsx": "Services section (Brand Identity, Web Design, Motion, Strategy) displayed as a ruled list with hover interactions, mono tags, and animated arrow icons on a cream background.",
+  "frontend/src/components/WhyChooseSection.tsx": "Dark charcoal philosophy section with a large pull-quote, three-column values grid with hover effects, and a four-stat bottom bar in forest green and gold.",
+  "frontend/src/components/LibrarySection.tsx": "Four-step process section (Discovery, Strategy, Design, Delivery) displayed as a grid of bordered cards with deliverable checklists and duration badges on a cream-dark background.",
+  "frontend/src/components/ContactSection.tsx": "Dark charcoal contact section with contact details panel and a full form (name, email, project type, message) with gold-accented focus states and a success state after submission.",
+  "frontend/src/components/Footer.tsx": "Dark footer with animated marquee ticker, brand column, three-column link grid, forest-green CTA, and bottom bar with dynamic year and caffeine.ai attribution with gold heart icon.",
+  "frontend/src/components/MockTestSection.tsx": "Selected work section with four colored project cards (forest green, cream, gold, dark) in a 2×2 grid featuring editorial typography and hover scale effects.",
+  "frontend/index.html": "HTML entry point updated with new title \"Verdant Studio — Creative Design Agency\" and meta description for the creative agency website."
 }

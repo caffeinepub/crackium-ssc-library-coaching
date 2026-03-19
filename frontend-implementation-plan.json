@@ -1,21 +1,97 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Clear all website content and render a blank empty page",
+  "title": "Complete Website Redesign with New Concept and Visual Identity",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Remove all page sections and replace the entire app with a single blank, empty page",
+      "summary": "Replace the existing CRACKIUM SSC coaching website with a completely new website with distinct concept, design, color palette, and layout",
       "acceptanceCriteria": [
-        "The deployed site shows a completely blank page with no text, images, or UI elements.",
-        "All section components (Header, Hero, Courses, MockTest, WhyChoose, Library, Contact, Footer) are removed from App.tsx.",
-        "No navigation, branding, or content is visible on the page."
+        "The new site has a completely different visual identity (colors, typography, layout) from the previous CRACKIUM site",
+        "No orange glow borders, glassmorphism cards, or SSC coaching content from the previous design are present",
+        "The site has a coherent, polished look and feel with a clear new theme"
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Replace all existing component imports and JSX content with an empty component that returns null or an empty fragment, ensuring a completely blank page with no visible elements."
+          "description": "Replace all current sections with new page structure that reflects the completely new website concept. Remove references to HeroSection, CoursesSection, WhyChooseSection, MockTestSection, LibrarySection, ContactSection components and replace with new sections appropriate for the new website theme."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Redesign the header navigation with new branding, navigation links, and styling that align with the new website concept. Remove all CRACKIUM SSC Academy branding and orange/glassmorphism styling. Apply the new color palette and typography."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Completely redesign the hero section with new content, layout, and visual effects that match the new website theme. Remove SSC academy stats, orange orbs, and existing decorative elements. Introduce new hero content and background effects aligned with the chosen design style."
+        },
+        {
+          "path": "frontend/src/components/CoursesSection.tsx",
+          "operation": "modify",
+          "description": "Transform this section into a new content section appropriate for the new website concept. Remove all SSC exam courses and glassmorphism cards with orange glow borders. Replace with content and layout matching the new theme."
+        },
+        {
+          "path": "frontend/src/components/WhyChooseSection.tsx",
+          "operation": "modify",
+          "description": "Redesign this section to serve the new website's purpose. Remove numbered feature cards about SSC coaching academy advantages. Replace with content sections that support the new website concept and apply the new design language."
+        },
+        {
+          "path": "frontend/src/components/MockTestSection.tsx",
+          "operation": "modify",
+          "description": "Convert this section to serve a new purpose aligned with the website concept. Remove mock test course listings and animated background orbs. Apply new layout and styling consistent with the chosen theme."
+        },
+        {
+          "path": "frontend/src/components/LibrarySection.tsx",
+          "operation": "modify",
+          "description": "Redesign this section for the new website purpose. Remove library facilities content and decorative background glows. Replace with appropriate content and styling for the new site."
+        },
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Redesign the contact section with new styling and layout. Remove glassmorphism cards with orange glow and grain texture overlay. Apply the new color palette and design approach."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Redesign the footer with new branding, links, and styling. Remove CRACKIUM brand logo, SSC-specific quick links and resources, social proof card, and shimmer CTA button. Apply new footer design consistent with the overall theme."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace all existing CSS custom properties, color definitions, and animations. Remove orange/blue OKLCH tokens, glassmorphism effects, glow shadows, shimmer animations, and gradient keyframes. Define a completely new color palette (avoiding blue, purple, and orange), new typography scale, and new animation keyframes that support the chosen design style. Replace Google Fonts imports with new font pairings."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Replace the entire Tailwind configuration with new design tokens. Remove existing brand blue/orange OKLCH color palettes, glow box shadows, and accordion animations. Define a new color system (avoiding blue, purple, orange), new font families, new spacing/sizing scales, and new utility extensions that match the chosen design style."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the HTML document title and meta tags to reflect the new website name and purpose. Remove references to 'Crackium SSC Library & Coaching'."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply a bold, creative visual theme with distinct style, unique color palette, typography pairing, and consistent layout across all sections",
+      "acceptanceCriteria": [
+        "A clearly defined color palette (not blue/purple, not orange) is used consistently across all components",
+        "Typography choices are intentional and distinct from the previous site",
+        "All sections follow the same design language"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Establish the visual theme foundation by defining CSS custom properties for the new color palette (avoiding blue, purple, orange), selecting and importing new font pairings, and creating new base styles that will be consistently applied. Define theme-specific utility classes and effects that support the chosen bold design direction."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind to support the bold visual theme by extending the default theme with the new color system, typography scale, spacing rhythm, and custom utilities. Ensure all design tokens are aligned with the chosen creative style and can be consistently applied across components."
         }
       ]
     }

@@ -1,108 +1,75 @@
-import { Users, ClipboardCheck, BookMarked, UserCheck, Wifi, Leaf } from 'lucide-react';
+import { Quote } from "lucide-react";
 
-const usps = [
+const values = [
   {
-    icon: Users,
-    title: 'Experienced Faculty',
-    desc: 'Learn from seasoned educators with deep expertise in SSC exam patterns and strategies.',
-    number: '01',
+    title: "Craft Over Commodity",
+    body: "We treat every project as a unique creative challenge. No templates, no shortcuts — only thoughtful, handcrafted design.",
   },
   {
-    icon: ClipboardCheck,
-    title: 'Regular Tests & Doubt Sessions',
-    desc: 'Frequent mock tests and dedicated doubt-clearing sessions to keep you exam-ready.',
-    number: '02',
+    title: "Clarity in Complexity",
+    body: "Great design simplifies. We distill complex ideas into clear, compelling visual narratives that resonate instantly.",
   },
   {
-    icon: BookMarked,
-    title: 'Updated Study Material',
-    desc: 'Comprehensive, regularly updated study material aligned with the latest SSC syllabus.',
-    number: '03',
-  },
-  {
-    icon: UserCheck,
-    title: 'Small Batches for Better Focus',
-    desc: 'Limited batch sizes ensure personalized attention and better learning outcomes.',
-    number: '04',
-  },
-  {
-    icon: Wifi,
-    title: 'Offline + Online Support',
-    desc: 'Flexible learning with both in-person classroom sessions and online support available.',
-    number: '05',
-  },
-  {
-    icon: Leaf,
-    title: 'Disciplined & Peaceful Environment',
-    desc: 'A fully disciplined, distraction-free atmosphere designed for serious aspirants.',
-    number: '06',
+    title: "Partnership, Not Transactions",
+    body: "We embed ourselves in your team, understanding your goals deeply before we ever open a design tool.",
   },
 ];
 
-export default function WhyChooseSection() {
+export default function PhilosophySection() {
   return (
-    <section id="why-choose" className="py-24 bg-charcoal-brand-light relative overflow-hidden">
-      {/* Top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-brand/30 to-transparent" />
-
-      {/* Background accent */}
-      <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-emerald-brand/20 to-transparent" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="grid lg:grid-cols-2 gap-12 items-end mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-12 bg-gold-brand" />
-              <span className="font-body text-gold-brand text-xs font-semibold tracking-[0.2em] uppercase">
-                Why Choose Us
-              </span>
-            </div>
-            <h2 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl text-white leading-tight">
-              Why Choose
-              <br />
-              <span className="text-gradient-emerald">Crackium SSC?</span>
-            </h2>
-          </div>
-          <div>
-            <p className="font-body text-white/50 text-base sm:text-lg leading-relaxed">
-              We don't just teach — we build champions. Here's what sets us apart from every other coaching institute in Delhi.
-            </p>
-          </div>
+    <section id="philosophy" className="bg-[var(--charcoal)] py-24 lg:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Pull quote */}
+        <div className="max-w-4xl mb-20 lg:mb-28">
+          <Quote size={32} className="text-[var(--gold)] mb-6 opacity-60" />
+          <blockquote className="font-display text-display-xl font-light text-[var(--cream)] leading-tight">
+            Design is not just what it looks like and feels like.{" "}
+            <em className="italic text-[var(--gold)]">Design is how it works.</em>
+          </blockquote>
+          <cite className="block mt-6 font-mono text-xs tracking-widest uppercase text-[oklch(97%_0.012_95_/_0.35)] not-italic">
+            — Our Studio Philosophy
+          </cite>
         </div>
 
-        {/* USP Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-charcoal-brand-mid">
-          {usps.map((usp) => {
-            const Icon = usp.icon;
-            return (
-              <div
-                key={usp.title}
-                className="group relative bg-charcoal-brand-light p-8 hover:bg-charcoal-brand-mid transition-all duration-300"
-              >
-                {/* Large number watermark */}
-                <div className="absolute top-4 right-6 font-heading font-black text-6xl text-white/[0.04] select-none leading-none">
-                  {usp.number}
-                </div>
-
-                {/* Icon */}
-                <div className="w-12 h-12 emerald-gradient flex items-center justify-center mb-6 shadow-emerald group-hover:shadow-emerald-lg transition-shadow">
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-
-                {/* Content */}
-                <h3 className="font-heading font-bold text-lg text-white mb-3 group-hover:text-gold-brand transition-colors leading-tight">
-                  {usp.title}
-                </h3>
-                <p className="font-body text-white/50 text-sm leading-relaxed">
-                  {usp.desc}
-                </p>
-
-                {/* Bottom accent line on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 gold-gradient opacity-0 group-hover:opacity-100 transition-opacity" />
+        {/* Values grid */}
+        <div className="grid md:grid-cols-3 gap-px bg-[oklch(97%_0.012_95_/_0.08)]">
+          {values.map((value, i) => (
+            <div
+              key={value.title}
+              className="bg-[var(--charcoal)] p-10 group hover:bg-[oklch(97%_0.012_95_/_0.03)] transition-colors duration-300"
+            >
+              <div className="font-mono text-xs tracking-widest uppercase text-[var(--gold)] opacity-60 mb-6">
+                0{i + 1}
               </div>
-            );
-          })}
+              <h3 className="font-display text-2xl font-light text-[var(--cream)] mb-4 group-hover:text-[var(--gold)] transition-colors duration-300">
+                {value.title}
+              </h3>
+              <p className="font-sans text-sm text-[oklch(97%_0.012_95_/_0.5)] leading-relaxed">
+                {value.body}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom stat bar */}
+        <div className="mt-px bg-[oklch(97%_0.012_95_/_0.08)]">
+          <div className="bg-[var(--charcoal)] grid grid-cols-2 md:grid-cols-4 divide-x divide-[oklch(97%_0.012_95_/_0.08)]">
+            {[
+              { num: "2016", label: "Founded" },
+              { num: "12", label: "Team Members" },
+              { num: "98%", label: "Client Retention" },
+              { num: "4×", label: "Award Winner" },
+            ].map((item) => (
+              <div key={item.label} className="p-8 text-center">
+                <div className="font-display text-4xl font-light text-[var(--gold)] mb-1">
+                  {item.num}
+                </div>
+                <div className="font-mono text-xs tracking-widest uppercase text-[oklch(97%_0.012_95_/_0.35)]">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

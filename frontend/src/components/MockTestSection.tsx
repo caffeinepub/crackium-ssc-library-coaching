@@ -1,126 +1,100 @@
-import { ClipboardCheck, CheckCircle, Phone, ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from "lucide-react";
 
-const coursesList = [
-  'SSC-CGL / CHSL / MTS / CPO / Steno',
-  'Delhi Police / GD / JE',
-  'Foundation & Target Batches',
+const projects = [
+  {
+    id: "01",
+    title: "Bloom Botanicals",
+    category: "Brand Identity",
+    year: "2025",
+    description: "A complete rebrand for an artisan plant shop — earthy tones, hand-drawn illustrations, and a packaging system that feels alive.",
+    color: "bg-[oklch(42%_0.1_155)]",
+    textColor: "text-[var(--cream)]",
+  },
+  {
+    id: "02",
+    title: "Meridian Finance",
+    category: "Web Design",
+    year: "2025",
+    description: "A bold, editorial website for a boutique investment firm that breaks every financial industry cliché.",
+    color: "bg-[oklch(92%_0.018_95)]",
+    textColor: "text-[var(--charcoal)]",
+  },
+  {
+    id: "03",
+    title: "Solstice Festival",
+    category: "Motion & Print",
+    year: "2024",
+    description: "Visual identity and motion package for a summer music festival — kinetic typography, vibrant posters, and animated stage graphics.",
+    color: "bg-[oklch(72%_0.12_85)]",
+    textColor: "text-[var(--charcoal)]",
+  },
+  {
+    id: "04",
+    title: "Kova Architecture",
+    category: "Digital Strategy",
+    year: "2024",
+    description: "Repositioning strategy and website redesign for a modernist architecture studio entering the luxury residential market.",
+    color: "bg-[oklch(22%_0.06_155)]",
+    textColor: "text-[var(--cream)]",
+  },
 ];
 
-export default function MockTestSection() {
+export default function WorkSection() {
   return (
-    <section
-      id="mock-test"
-      className="relative py-0 overflow-hidden"
-    >
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/generated/hero-new.dim_1600x900.png')" }}
-      />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-charcoal-brand/92" />
-
-      {/* Left gold bar */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 gold-gradient" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-0 min-h-[600px]">
-          {/* Left: Giant Typography */}
-          <div className="flex flex-col justify-center py-20 pr-0 lg:pr-12 border-b lg:border-b-0 lg:border-r border-gold-brand/15">
-            <div className="flex items-center gap-3 mb-8">
-              <ClipboardCheck className="w-5 h-5 text-gold-brand" />
-              <span className="font-body text-gold-brand text-xs font-semibold tracking-[0.2em] uppercase">
-                Now Available
-              </span>
-            </div>
-
-            <div className="mb-6">
-              <div className="font-heading font-black leading-none tracking-tight">
-                <span className="block text-7xl sm:text-8xl md:text-9xl text-gradient-gold">
-                  MOCK
-                </span>
-                <span className="block text-7xl sm:text-8xl md:text-9xl text-gradient-gold">
-                  TEST
-                </span>
-                <div className="flex items-center gap-4 my-3">
-                  <div className="h-0.5 w-16 bg-gold-brand/50" />
-                  <span className="text-3xl sm:text-4xl text-white/30">+</span>
-                  <div className="h-0.5 w-16 bg-gold-brand/50" />
-                </div>
-                <span className="block text-5xl sm:text-6xl md:text-7xl text-white/85">
-                  SOLUTION
-                </span>
-              </div>
-            </div>
-
-            <p className="font-body text-white/50 text-base max-w-sm">
-              Practice with real exam-pattern mock tests and get detailed solutions to sharpen your preparation.
-            </p>
+    <section id="work" className="bg-cream py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-8 border-b border-border">
+          <div>
+            <span className="font-mono text-xs tracking-widest uppercase text-[var(--forest)] mb-3 block">
+              Selected Work
+            </span>
+            <h2 className="font-display text-display-lg font-light text-[var(--charcoal)]">
+              Recent Projects
+            </h2>
           </div>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 font-mono text-xs tracking-widest uppercase text-[var(--forest)] hover:text-[var(--forest-dark)] transition-colors link-underline"
+          >
+            View All Work
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
 
-          {/* Right: Details Panel */}
-          <div className="flex flex-col justify-center py-20 pl-0 lg:pl-12">
-            {/* Courses label */}
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div className="h-px w-8 bg-emerald-brand" />
-              <span className="font-body text-emerald-brand-light text-xs font-semibold tracking-[0.2em] uppercase">
-                Courses Covered
-              </span>
-            </div>
-
-            {/* Course List */}
-            <ul className="space-y-4 mb-10">
-              {coursesList.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-brand flex-shrink-0 mt-0.5" />
-                  <span className="font-body text-white text-base sm:text-lg font-medium">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Divider */}
-            <div className="h-px w-full bg-gold-brand/15 mb-8" />
-
-            {/* Phone Numbers */}
-            <div className="space-y-3 mb-8">
-              <p className="font-body text-white/40 text-xs tracking-widest uppercase">Call to Enroll</p>
-              <a
-                href="tel:6206899318"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-10 h-10 emerald-gradient flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 text-white" />
-                </div>
-                <span className="font-heading font-black text-white text-2xl sm:text-3xl group-hover:text-gold-brand transition-colors">
-                  6206899318
-                </span>
-                <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-gold-brand group-hover:translate-x-1 transition-all" />
-              </a>
-              <a
-                href="tel:8252065374"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-10 h-10 emerald-gradient flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 text-white" />
-                </div>
-                <span className="font-heading font-black text-white text-2xl sm:text-3xl group-hover:text-gold-brand transition-colors">
-                  8252065374
-                </span>
-                <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-gold-brand group-hover:translate-x-1 transition-all" />
-              </a>
-            </div>
-
-            {/* CTA Button */}
-            <a
-              href="tel:6206899318"
-              className="inline-flex items-center gap-3 px-8 py-4 gold-gradient text-charcoal-brand font-body font-bold text-base shadow-gold-lg hover:shadow-gold transition-all duration-300 hover:scale-105 self-start"
+        {/* Projects grid */}
+        <div className="grid md:grid-cols-2 gap-6 stagger-children">
+          {projects.map((project) => (
+            <article
+              key={project.id}
+              className={`group relative ${project.color} overflow-hidden cursor-pointer hover-scale`}
             >
-              <Phone className="w-5 h-5" />
-              Enroll for Mock Tests Now
-            </a>
-          </div>
+              {/* Content */}
+              <div className={`p-10 lg:p-12 min-h-72 flex flex-col justify-between ${project.textColor}`}>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="font-mono text-xs tracking-widest uppercase opacity-50 block mb-2">
+                      {project.category} · {project.year}
+                    </span>
+                    <h3 className="font-display text-3xl lg:text-4xl font-light leading-tight">
+                      {project.title}
+                    </h3>
+                  </div>
+                  <ArrowUpRight
+                    size={20}
+                    className="opacity-0 group-hover:opacity-100 transition-all duration-300 flex-shrink-0 mt-1"
+                  />
+                </div>
+
+                <p className="font-sans text-sm leading-relaxed opacity-70 max-w-sm mt-6">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-[var(--charcoal)] opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+            </article>
+          ))}
         </div>
       </div>
     </section>
